@@ -1,6 +1,6 @@
 #!/bin/sh
 ####### Process Public Daily Files For Generation 
-FILES=*
+FILES=PUBLIC*.*
 for f in $FILES;
 do
 awk -F "," '$2 ~ /TUNIT/ && $4 ~ /2/  && $7 ~!/DUID/ {print $0}' "$f" >>"Dispatch_temp.CSV"
